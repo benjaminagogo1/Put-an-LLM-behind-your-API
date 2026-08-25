@@ -1,0 +1,17 @@
+{
+  "name": "support-triage-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A production-minded support triage endpoint backed by an OpenAI-compatible LLM provider.",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "hello": "node src/llm/hello.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "openai": "^5.12.2",
+    "zod": "^4.1.5"
+  }
+}
