@@ -17,3 +17,11 @@ export const fallback = {
   confidence: 0.1,
   reason: "AI triage is temporarily disabled; manual review is required.",
 };
+
+export function stubTriage(text) {
+  const value = text.toLowerCase();
+  if (/charg|invoice|card|subscription|payment|bill/.test(value)) return { category: "billing", urgency: "normal", confidence: 0.9, reason: "The message concerns billing or payment." };
+  if (/crash|error|bug|fail|not work|upload/.test(value)) return { category: "bug", urgency: /crash|fail/.test(value) ? "high" : "normal", confidence: 0.9, reason: "The message reports a product problem." };
+  if (/add|integration|feature|dark mode|could you|would like/.test(value)) return { category: "feature", urgency: "low", confidence: 0.9, reason: "The message requests a product enhancement." };
+  return fallback;
+}
