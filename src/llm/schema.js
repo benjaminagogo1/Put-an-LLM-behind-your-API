@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const inputSchema = z.object({
-  text: z.string({ error: "text must be a string" }).min(1, "text is required").max(2000, "text must be at most 2000 characters"),
+  text: z.string({ invalid_type_error: "text must be a string" }).min(1, "text is required").max(2000, "text must be at most 2000 characters"),
 }).strict();
 
 export const triageSchema = z.object({
