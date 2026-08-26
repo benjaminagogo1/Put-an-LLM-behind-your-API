@@ -194,6 +194,9 @@ Stub mode makes local development and tests free. In production, cost depends on
 - [ ] Eight evaluation cases and a dated score are committed.
 - [ ] No secrets are present in the repository.
 
-## Honest Next Improvement
 
-With another day, I would expand the evaluation set beyond eight cases, add automated prompt-injection regression tests, and compare two providers/models using the same contract and scoring script.
+## License
+
+This project was created as part of the FlyRank Internship Backend Track — Week 7 — Assignment A17.
+
+For educational and portfolio purposes.
